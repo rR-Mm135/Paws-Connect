@@ -1,43 +1,53 @@
+r, [11/10/2025 4:37 PM]
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatConnect - Adoptable Cats Near You</title>
+    <title>CatConnect - Sick Cats</title>
 </head>
 <body>
+    <!--the Header containing logo and navigation menu -->
     <header>
         <div class="container">
             <div class="logo">
                 <span class="logo-icon">🐱</span>
                 Cat<span>Connect</span>
             </div>
-           <!-- website structre (all the pages in the website) -->
+
+            <!-- Main navigation bar linking to all website pages -->
             <nav class="main-nav">
                 <a href="home.html">Home</a>
                 <a href="lost-cats.html">Lost Cats</a>
-                <a href="adoptable-cats.html" class="active">Adoptable Cats</a>
-                <a href="sick-cats.html">Sick Cats</a>
+                <a href="adoptable-cats.html">Adoptable Cats</a>
+                <a href="sick-cats.html" class="active">Sick Cats</a> <!-- Current active page -->
                 <a href="profile.html">My Profile</a>
                 <a href="login.html">Login</a>
             </nav>
         </div>
     </header>
-    <!--the biggest section -->
+
+    <!-- Hero section: main title + subtitle -->
     <section class="hero">
         <div class="container">
-            <h1>Adoptable Cats Near You</h1>
-            <p>Find your forever friend today</p>
+            <h1>Sick Cats Needing Care</h1> <!-- Page title -->
+            <p>Give a Sick Cat Hope and a chance to heal</p> <!-- Subtitle -->
         </div>
     </section>
-    <!--the regions drop list section -->
+
+    <!-- Main content container -->
     <main class="container">
+
+        <!-- Search and filter section -->
         <section class="search-section">
             <div class="search-bar">
-                <input type="text" class="search-input" placeholder="Search by breed, location...">
+                <!-- Search input for users to filter results -->
+                <input type="text" class="search-input" placeholder="Search by condition, location..."> <!--here-->
                 <button class="search-btn">Search</button>
             </div>
+
             <div class="filters">
+                <!-- Region dropdown filter -->
                 <div class="filter-options">
                     <select class="region-filter">
                         <option value="">All Regions</option>
@@ -56,31 +66,40 @@
                         <option value="asir">Asir Region</option>
                     </select>
                 </div>
-                <button class="post-btn" onclick="location.href='post-adoption.html'">Post for Adoption</button>
+
+                <!-- Button for posting a new sick cat announcement -->
+                <button class="post-btn" onclick="location.href='post-sick.html'">Report Sick Cat</button>
             </div>
         </section>
 
-        <!-- Empty State -->
+        <!-- Empty state section that appears when no announcements exist -->
         <section class="empty-state">
             <div class="empty-content">
-                <div class="empty-icon">😿</div>
-                <h2>No Cats Available for Adoption</h2>
-                <p>There are currently no cats available for adoption in your area. Be the first to post an adoption announcement!</p>
-                <button class="cta-button" onclick="location.href='post-adoption.html'">Post an Adoption Announcement</button>
+                <div class="empty-icon">😿</div> <!-- Sad icon -->
+                <h2>No Sick Cats Reported</h2> <!-- Message when no data -->
+                <p>If you know a sick cat that needs help, please share an announcement.</p>
+                <button class="cta-button" onclick="location.href='post-sick.html'">Report a Sick Cat</button>
             </div>
         </section>
 
-        <!-- Cats  Section (empty until user post an anouncment ) -->
-        <section class="cats-grid" id="catsGrid" style="display: none;">
-            <!-- Cat  will appear here when users post announcements -->
+        <!-- Section that will contain sick cat cards once data is available -->
+        <!-- Hidden by default until populated via database -->
+        <section class="cats-grid" id="sickCatsGrid" style="display: none;">
+            <!-- Sick cat cards will appear here after posting announcements -->
         </section>
+
     </main>
 
-    <footer>
-                <div class="copyright">
-                    &copy; 2025 CatConnect. All rights reserved.
-                </div>
+    <!-- Footer section -->
+   <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 CatConnect. All rights reserved.
+            </div>
+        </div>
     </footer>
 </body>
-</html>
 
+</html>
+</body>
+</html>
